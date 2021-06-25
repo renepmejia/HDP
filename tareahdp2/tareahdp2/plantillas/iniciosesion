@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <title>
+            Vacunados
+        </title>
+        <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+     
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+<style type="text/css">
+  
+*/ GENERAL STYLES
+——————————————————–*/
+body {
+background: #efefef;
+font-family: ‘Open Sans’, sans-serif;
+color: #777;
+}
+
+a {
+color: #f58220;
+font-weight: 400;
+}
+
+span {
+font-weight: 300;
+color: #f58220;
+}
+
+.mlogin {
+margin: 170px auto 0;
+}
+
+.mregister {
+margin: 80px auto 0;
+}
+
+.error {
+margin: 40px auto 0;
+border: 1px solid #777;
+padding: 3px;
+color: #fff;
+text-align: center;
+width: 650px;
+background: #f58220;
+}
+
+.regtext {
+font-size: 13px;
+margin-top: 26px;
+color: #777;
+}
+
+/*= CONTAINERS
+——————————————————–*/
+.container {
+padding: 25px 16px 25px 10px;
+font-weight: 400;
+overflow: hidden;
+width: 350px;
+height: auto;
+background: #fff;
+-webkit-box-shadow: 0 1px 3px rgba(0,0,0,.13);
+-moz-box-shadow: 0 1px 3px rgba(0,0,0,.13);
+box-shadow: 0 1px 3px rgba(0,0,0,.13);
+}
+
+#welcome {
+width: 500px;
+padding: 30px;
+background: #fff;
+margin: 160px auto 0;
+-webkit-box-shadow: 0 1px 3px rgba(0,0,0,.13);
+-moz-box-shadow: 0 1px 3px rgba(0,0,0,.13);
+box-shadow: 0 1px 3px rgba(0,0,0,.13);
+}
+
+.container h1 {
+color: #777;
+text-align: center;
+font-weight: 300;
+border: 1px dashed #777;
+margin-top: 13px;
+}
+
+.container label {
+color: #777;
+font-size: 14px;
+}
+
+#login {
+width: 320px;
+margin: auto;
+padding-bottom: 15px;
+}
+
+.container form .input,.container input[type=text],.container input[type=password],.container input[type=e] {
+background: #fbfbfb;
+font-size: 24px;
+line-height: 1;
+width: 100%;
+padding: 3px;
+margin: 0 6px 5px 0;
+outline: none;
+border: 1px solid #3090C7;
+}
+
+.container form .input:focus {
+border: 1px solid #0000A0;
+-webkit-box-shadow: 0 0 3px 0 rgba(245,130,32,0.75);
+-moz-box-shadow: 0 0 3px 0 rgba(245,130,32,0.75);
+box-shadow: 0 0 3px 0 rgba(245,130,32,0.75);
+}
+
+/*= BUTTONS
+——————————————————–*/
+
+.button{
+border: solid 1px #000000;
+background: #828282;
+background: -webkit-gradient(linear, left top, left bottom, from(#000100), to(#515151));
+background: -moz-linear-gradient(top, #000079, #46A3FF);
+color: #fff;
+padding: 7px 12px;
+-webkit-border-radius:4px;
+-moz-border-radius:4px;
+border-radius:4px;
+float: right;
+cursor: pointer;
+}
+
+.button:hover{
+background: #1589FF;
+background: -webkit-gradient(linear, left top, left bottom, from(#464545), to(#979797));
+background: -moz-linear-gradient(top, #0000A0, #95B9C7);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=’#0000A0′, endColorstr=’#95B9C7′);
+}
+
+/*= FOOTER
+——————————————————–*/
+footer {
+color: #777;
+font-size: 12px;
+text-align: center;
+margin-top: 20px;}   
+   
+
+
+</style>   
+ 
+   
+   
+    </head>
+<body>
+   <!-- Barra_de_navegación -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="index.html"><i class="fas fa-heartbeat"></i></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="llenado">Inicio de Sesión</a>
+          </li>
+        </ul>
+      </div>
+      
+       <a class="navbar-brand"  th:href=""><i class="far fa-user-circle float-right"></i></a> 
+       
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"></button>
+    </nav>
+    
+    
+    <header> </header>
+
+
+
+
+<div class="container mlogin">
+<div id="login">
+<h1>Encuestador</h1>
+<form name="loginform" id="loginform" action="" method="POST">
+<p>
+<label for="user_login">Nombre De Usuario<br />
+<input type="text" name="username" id="username" class="input" value="" size="20" /></label>
+</p>
+<p>
+<label for="user_pass">Contraseña<br />
+<input type="password" name="password" id="password" class="input" value="" size="20" /></label>
+</p>
+<p class="submit">
+<input type="submit" name="login" class="button" value="Entrar" />
+</p>
+
+</form>
+
+</div>
+
+</div>
+
+    
+    
+</body>
+</html>
