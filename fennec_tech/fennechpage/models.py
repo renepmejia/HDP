@@ -26,8 +26,13 @@ class Municipio(models.Model):
         managed = False
         db_table = 'municipio'
 
-class Persona(models.Model):
-    id_entrevistador = models.IntegerField()
+class Usuario(models.Model):
+    id_usuario = models.IntegerField(primary_key=True)
+    nombre = models.CharField(max_length=50)
+    contraseña =  models.CharField(max_length=10)
+
+    class Meta:
+        verbose_name='Usuario'
 
 class Vacuna(models.Model):
     id_vacuna = models.IntegerField(primary_key= True)
@@ -38,10 +43,11 @@ class Vacuna(models.Model):
         verbose_name='Vacuna'
 
 class Entrevista(models.Model):
-    id_entrevistador = models.CharField('ID entrevistador',max_length=3)
-    id_depa = models.CharField('Departamento', max_length=2, null=False, blank=False)
-    id_muni = models.CharField('Municipio', max_length=3, null=False, blank=False)
-    id_vacuna = models.CharField('Dosis', max_length=30, null=False, blank=False)
+    id_usuario = models.CharField('Nombre entrevistador',max_length=5, null=False, blank=False)
+    id_depa = models.CharField('Departamento', max_length=15, null=False, blank=False)
+    id_muni = models.CharField('Municipio', max_length=50, null=False, blank=False)
+    id_vacuna = models.BooleanField('Dosis 1', default=True)
+    id_vacuna = models.BooleanField('Dosis 2')
 
     class Meta:
         verbose_name='Entrevista'

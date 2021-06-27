@@ -22,4 +22,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('login/', views.sesion, name="Iniciar Sesion"),
     path('forms/', views.formulario, name="Formulario"),
+    path('inicio/', views.inicio, name="Inicio"),
+    path('inicio/formulario.html', views.formulario),
+    path('login/formulario.html', views.inicio),
+    path('forms/iniciosesion.hmtl', views.sesion),
     ]
