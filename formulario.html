@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <title>
+            Encuesta
+        </title>
+        <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+     
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    </head>
+<body>
+   <!-- Barra_de_navegación -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="formulario.html"><i class="fas fa-heartbeat"></i></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="formulario.html">Vacunados Covid-19</a>
+          </li>
+        </ul>
+      </div>
+       
+       
+     <a class="navbar-brand" href="iniciosesion.hmtl"><i class="far fa-user-circle float-right"></i></a> 
+          
+         
+       
+    </nav>
+    
+    
+    <header>
+     
+          
+       
+       
+    </header>
+    
+     <div class="container">
+    <h1>Encuestador:Pepe</h1>
+    
+        <!--Scripts -->
+        <small class="text-danger">* Obligatorio</small>
+
+        <form id="Encuesta" action="" method="GET">
+                             
+          <div class="form-row">
+            <!-- Departamento -->
+            <div class="form-group col-md-6">
+              <label for="departamento">Departamento: <span class="text-danger">*</span></label><br>
+              <select class="form-control" name="departamento" id="departamento">
+                <option value="" disabled selected>Seleccione un Departamento</option>
+                <option value="Ahuachapán">Ahuachapán</option>
+                <option value="SantaAna">Santa Ana</option>
+                <option value="Sonsonate">Sonsonate</option>
+                <option value="LaLibertad">La Libertad</option>
+                <option value="Chalatenango">Chalatenango</option>
+                <option value="SanSalvador">San Salvador</option>
+                <option value="Cuscatlán">Cuscatlán</option>
+                <option value="LaPaz">La Paz</option>
+                <option value="Cabañas">Cabañas</option>
+                <option value="Usulután">Usulután</option>
+                <option value="SanMiguel">San Miguel</option>
+                <option value="Morazán">Morazán</option>
+                <option value="LaUnión">La Unión</option>
+                </select>
+              </div>
+ 				
+ 				<!-- Dosis -->
+            <div class="form-group col-md-6">
+              <label for="dosis">Dosis: <span class="text-danger">*</span></label>
+  
+              <div>
+                <!-- Radiobutton primera -->
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" id="pri" name="dosis" value="pri" checked>
+                  <label class="form-check-label" for="pri">Primera</label>
+                </div>            
+  
+                <!-- Radiobutton femenino -->
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" id="seg" name="dosis" value="seg">
+                  <label class="form-check-label" for="seg">Segunda</label>
+                </div>      
+              </div>                  
+            </div>
+          </div>  
+          
+           
+             <div class="form-row">
+  
+             <!-- Municipio -->
+            <div class="form-group col-md-6">
+              <label for="municipio">Municipio: <span class="text-danger">*</span></label><br>
+              <select class="form-control" name="municipio" id="municipio">
+                <option value="" disabled selected>Seleccione un Departamento</option>
+                <option value="Ahuachapán">Ahuachapán</option>
+                <option value="SantaAna">Santa Ana</option>
+                <option value="Sonsonate">Sonsonate</option>
+                <option value="LaLibertad">La Libertad</option>
+                <option value="Chalatenango">Chalatenango</option>
+                <option value="SanSalvador">San Salvador</option>
+                <option value="Cuscatlán">Cuscatlán</option>
+                <option value="LaPaz">La Paz</option>
+                <option value="Cabañas">Cabañas</option>
+                <option value="Usulután">Usulután</option>
+                <option value="SanMiguel">San Miguel</option>
+                <option value="Morazán">Morazán</option>
+                <option value="LaUnión">La Unión</option>
+
+              </select>
+            </div>           
+              
+          </div>
+  
+          <div class="float-right">
+             <!-- Botón de limpiar -->
+            <button id="btnLimpiar" class="btn btn-outline-dark" type="button">Limpiar</button>
+  
+            <!-- Botón de submit -->
+            <button class="btn btn-dark" type="submit">Enviar</button>
+          </div>       
+        </form>
+      </div>    
+  
+      <!-- Scripts js -->
+      <!-- jQuery library -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <!-- Popper JS -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <!-- Latest compiled JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!--Scroip formulario-->
+    <script src="Scripts/formulario.js"></script>
+    
+    
+    
+</body>
+</html><a class="navbar-brand"  ><i class="fa-solid fa-heart-pulse-left"></i></a>
